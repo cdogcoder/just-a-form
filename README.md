@@ -1,1 +1,3 @@
 # just-a-form
+
+Hey everyone! This is my second pseudo project for the Odin Project, and today, I will be building a basic form that will implement live inline validation using JavaScript! That's right, we're going to use the Constraint Validation API to customize our error messages and all that fun stuff! (...okay) Once again, all media used in this project that are not my own will be linked below, make sure to go give the creators some love! With that said, thank you for viewing repo and I hope you enjoyed the project!
