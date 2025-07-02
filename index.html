@@ -6,23 +6,23 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-    <form class="interest-form">
+    <form class="interest-form" novalidate>
       <h1 class="interest-form-title">Interest Form</h1>
       <p class="input-container">
         <label for="email">Email</label
-        ><input type="email" id="email" name="email" />
+        ><input type="email" id="email" name="email" required />
       </p>
       <p class="input-container">
         <label for="country">Country</label
-        ><input type="text" id="country" name="country" />
+        ><input type="text" id="country" name="country" required />
       </p>
       <p class="input-container">
         <label for="postal-code">Postal Code</label
-        ><input type="number" id="postal-code" name="postal-code" />
+        ><input type="number" id="postal-code" name="postal-code" required />
       </p>
       <p class="input-container">
         <label for="password">Password</label
-        ><input type="password" id="password" name="password" />
+        ><input type="password" id="password" name="password" required />
       </p>
       <p class="input-container">
         <label for="password-confirmation">Confirm Password</label
@@ -30,6 +30,7 @@
           type="password"
           id="password-confirmation"
           name="password-confirmation"
+          required
         />
       </p>
     </form>
