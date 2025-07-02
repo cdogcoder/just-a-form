@@ -11,10 +11,21 @@ const passwordErrorSpan = document.querySelector(".password-error");
 const passwordConfirmationErrorSpan = document.querySelector(".password-confirmation-error");
 
 function validateInput(selectedInput, selectedSpan) {
-    const validity = selectedInput.validity
-    if (validity.valueMissing) {
+    const validity = selectedInput.validity;
+    const inputType = selectedInput.id;
+    console.log(inputType)
+    if (!validity.valid) {
         selectedInput.classList = "invalid";
-        selectedSpan.textContent = "yeah man"
+        if (validity.valueMissing) {
+            switch (inputType) {
+                case "email":
+                    selectedSpan.textContent = "You have not entered an email.";
+                    break;
+                case "country":
+                case "postal-code":
+                    selectedSpan.textContent = `You have not entered a ${inputType}.`;
+            }
+        } 
     } else {
         selectedInput.classList = "";
         selectedSpan.textContent = "";
