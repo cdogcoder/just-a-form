@@ -21,10 +21,16 @@ body {
     background-color: rgb(197, 243, 255);
     box-shadow: 0px 0px 5px rgb(255, 255, 255);
     border-radius: 1rem;
+    align-items: center;
 }
 
 .input-container {
     display: flex;
     flex-direction: column;
     gap: .25rem;
+    width: 100%;
+}
+
+.submit-button {
+    padding: .25rem .5rem;
 }
