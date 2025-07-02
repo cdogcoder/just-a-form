@@ -45,3 +45,9 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+input:invalid {
+    background-color: rgb(255, 235, 235);
+    border: 2px solid red;
+}
+
