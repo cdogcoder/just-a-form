@@ -20,3 +20,17 @@ function validateInput(selectedInput, selectedSpan) {
         selectedSpan.textContent = "";
     }
 }
+
+window.addEventListener("load", ()=> {
+    validateInput(emailInput, emailErrorSpan);
+    validateInput(countryInput, countryErrorSpan);
+    validateInput(postalCodeInput, postalCodeErrorSpan);
+    validateInput(passwordInput, passwordErrorSpan);
+    validateInput(passwordConfirmationInput, passwordConfirmationErrorSpan);
+})
+
+emailInput.addEventListener("keyup", () => validateInput(emailInput, emailErrorSpan));
+countryInput.addEventListener("keyup", () => validateInput(countryInput, countryErrorSpan));
+postalCodeInput.addEventListener("keyup", () => validateInput(postalCodeInput, postalCodeErrorSpan));
+passwordInput.addEventListener("keyup", () => validateInput(passwordInput, passwordErrorSpan));
+passwordConfirmationInput.addEventListener("keyup", () => validateInput(passwordConfirmationInput, passwordConfirmationErrorSpan));
