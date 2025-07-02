@@ -11,10 +11,12 @@
       <p class="input-container">
         <label for="email">EMAIL</label
         ><input type="email" id="email" name="email" required />
+        <span class="email-error" aria-live="polite"></span>
       </p>
       <p class="input-container">
         <label for="country">COUNTRY</label
         ><input type="text" id="country" name="country" required />
+        <span class="country-error" aria-live="polite"></span>
       </p>
       <p class="input-container">
         <label for="postal-code">POSTAL CODE</label
@@ -26,6 +28,7 @@
           minlength="5"
           maxlength="5"
         />
+        <span class="postal-code-error" aria-live="polite"></span>
       </p>
       <p class="input-container">
         <label for="password">PASSWORD</label
@@ -37,6 +40,7 @@
           minlength="6"
           maxlength="30"
         />
+        <span class="password-error" aria-live="polite"></span>
       </p>
       <p class="input-container">
         <label for="password-confirmation">CONFIRM PASSWORD</label
@@ -48,6 +52,7 @@
           minlength="6"
           maxlength="30"
         />
+        <span class="password-confirmation-error" aria-live="polite"></span>
       </p>
       <button class="submit-button" type="submit">Submit</button>
     </form>
