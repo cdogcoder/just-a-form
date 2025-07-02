@@ -25,6 +25,15 @@ function validateInput(selectedInput, selectedSpan) {
                 case "postal-code":
                     selectedSpan.textContent = `You have not entered a ${inputType}.`;
             }
+        } else if (validity.typeMismatch) {
+            switch (inputType) {
+                case "email":
+                    selectedSpan.textContent = "Not an email.";
+                    break;
+                case "country":
+                case "postal-code":
+                    selectedSpan.textContent = `Not a ${inputType}`;
+            }
         } 
     } else {
         selectedInput.classList = "";
