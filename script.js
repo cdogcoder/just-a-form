@@ -3,6 +3,8 @@ const countryInput = document.querySelector("#country");
 const postalCodeInput = document.querySelector("#postal-code");
 const passwordInput = document.querySelector("#password");
 const passwordConfirmationInput = document.querySelector("#password-confirmation");
+const passwordInputRevealButton = document.querySelector("#password + .reveal-password-button");
+const passwordConfirmationInputRevealButton = document.querySelector("#password-confirmation + .reveal-password-button");
 
 const emailErrorSpan = document.querySelector(".email-error");
 const countryErrorSpan = document.querySelector(".country-error");
@@ -13,7 +15,7 @@ const passwordConfirmationErrorSpan = document.querySelector(".password-confirma
 function validateInput(selectedInput, selectedSpan) {
     const validity = selectedInput.validity;
     const inputType = selectedInput.id;
-    console.log(inputType, validity)
+    // console.log(inputType, validity)
     if (inputType == "postal-code") {
         if (selectedInput.value.length != 5) {
             selectedInput.classList = "invalid";
@@ -85,3 +87,16 @@ countryInput.addEventListener("keyup", () => validateInput(countryInput, country
 postalCodeInput.addEventListener("keyup", () => validateInput(postalCodeInput, postalCodeErrorSpan));
 passwordInput.addEventListener("keyup", () => validateInput(passwordInput, passwordErrorSpan));
 passwordConfirmationInput.addEventListener("keyup", () => validateInput(passwordConfirmationInput, passwordConfirmationErrorSpan));
+
+function revealPassword(button, event) {
+    if (button.id == "p") {
+        if (event) {
+            console.log(event);
+        }
+    }
+    console.log(event.type)
+}
+
+passwordInputRevealButton.addEventListener("mousedown", () => console.log("down"))
+passwordInputRevealButton.addEventListener("mouseup", () => console.log("up"))
+

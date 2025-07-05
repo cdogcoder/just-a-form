@@ -83,5 +83,4 @@ input[type="number"] {
 
 .reveal-password-button:active {
     cursor: grabbing;
-    visibility: hidden;
 }
