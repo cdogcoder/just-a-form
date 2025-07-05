@@ -33,6 +33,7 @@ body {
     flex-direction: column;
     width: 100%;
     gap: .25rem;
+    position: relative;
 }
 
 input {
@@ -67,6 +68,11 @@ input[type="number"] {
     border: 2px solid red;
 }
 
-input[type="password"]::before {
-    content: "li";
+.reveal-password-button {
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: .75rem;
+    bottom: 1.25rem; 
 }
