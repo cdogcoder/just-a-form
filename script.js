@@ -13,6 +13,7 @@ const passwordConfirmationErrorSpan = document.querySelector(".password-confirma
 function validateInput(selectedInput, selectedSpan) {
     const validity = selectedInput.validity;
     const inputType = selectedInput.id;
+    console.log(inputType, validity)
     if (inputType == "postal-code") {
         if (selectedInput.value.length != 5) {
             selectedInput.classList = "invalid";
@@ -21,6 +22,17 @@ function validateInput(selectedInput, selectedSpan) {
         } else {;
             selectedInput.classList = "";
             selectedSpan.textContent = "";
+        }
+    } else if (inputType == "password-confirmation") {
+        if (selectedInput.value != passwordInput.value) {
+            selectedInput.classList = "invalid";
+            selectedSpan.textContent = "Passwords do not match.";
+            return;
+        }
+    } else if (inputType == "password") {
+        if (selectedInput.value != passwordConfirmationInput.value) {
+            passwordConfirmationInput.classList = "invalid";
+            passwordConfirmationErrorSpan.textContent = "Passwords do not match.";
         }
     }
     if (!validity.valid) {
