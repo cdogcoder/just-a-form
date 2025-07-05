@@ -90,13 +90,22 @@ passwordConfirmationInput.addEventListener("keyup", () => validateInput(password
 
 function revealPassword(button, event) {
     if (button.id == "p") {
-        if (event) {
-            console.log(event);
+        if (event.type == "mousedown") {
+            passwordInput.type = "text";
+        } else if (event.type == "mouseup") {
+            passwordInput.type = "password";
+        }
+    } else if (button.id == "pc") {
+        if (event.type == "mousedown") {
+            passwordConfirmationInput.type = "text";
+        } else if (event.type == "mouseup") {
+            passwordConfirmationInput.type = "password";
         }
     }
-    console.log(event.type)
 }
 
-passwordInputRevealButton.addEventListener("mousedown", () => console.log("down"))
-passwordInputRevealButton.addEventListener("mouseup", () => console.log("up"))
+passwordInputRevealButton.addEventListener("mousedown", (event) => revealPassword(passwordInputRevealButton, event))
+passwordInputRevealButton.addEventListener("mouseup", (event) => revealPassword(passwordInputRevealButton, event))
 
+passwordConfirmationInputRevealButton.addEventListener("mousedown", (event) => revealPassword(passwordConfirmationInputRevealButton, event))
+passwordConfirmationInputRevealButton.addEventListener("mouseup", (event) => revealPassword(passwordConfirmationInputRevealButton, event))
