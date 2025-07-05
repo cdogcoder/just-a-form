@@ -12,8 +12,18 @@ const passwordConfirmationErrorSpan = document.querySelector(".password-confirma
 
 function validateInput(selectedInput, selectedSpan) {
     const validity = selectedInput.validity;
+    // console.log(validity.valid)
     const inputType = selectedInput.id;
-    console.log(inputType)
+    if (inputType == "postal-code") {
+        if (selectedInput.value.length != 5) {
+            selectedInput.classList = "invalid";
+            selectedSpan.textContent = "Postal code not properly formatted.";
+            return;
+        } else {;
+            selectedInput.classList = "";
+            selectedSpan.textContent = "";
+        }
+    }
     if (!validity.valid) {
         selectedInput.classList = "invalid";
         if (validity.valueMissing) {
@@ -40,11 +50,7 @@ function validateInput(selectedInput, selectedSpan) {
             if (inputType == "postal-code") {
                 selectedSpan.textContent = "Postal code is invalid.";
             }
-        } else if (validity.tooLong) {
-            if (inputType == "postal-code") {
-                selectedSpan.textContent = "Postal code is too long."
-            }
-        }
+        } 
     } else {
         selectedInput.classList = "";
         selectedSpan.textContent = "";
