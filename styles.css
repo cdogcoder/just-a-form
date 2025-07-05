@@ -67,3 +67,6 @@ input[type="number"] {
     border: 2px solid red;
 }
 
+input[type="password"]::before {
+    content: "li";
+}
