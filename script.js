@@ -24,6 +24,7 @@ function validateInput(selectedInput, selectedSpan) {
                 case "country":
                 case "postal-code":
                     selectedSpan.textContent = `You have not entered a ${inputType}.`;
+                    break;
             }
         } else if (validity.typeMismatch) {
             switch (inputType) {
@@ -33,8 +34,13 @@ function validateInput(selectedInput, selectedSpan) {
                 case "country":
                 case "postal-code":
                     selectedSpan.textContent = `Not a ${inputType}`;
+                    break;
             }
-        } 
+        } else if (validity.rangeOverflow || validity.rangeUnderflow) {
+            if (inputType == "postal-code") {
+                selectedSpan.textContent = "Postal code is invalid.";
+            }
+        }
     } else {
         selectedInput.classList = "";
         selectedSpan.textContent = "";
