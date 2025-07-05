@@ -40,6 +40,10 @@ function validateInput(selectedInput, selectedSpan) {
             if (inputType == "postal-code") {
                 selectedSpan.textContent = "Postal code is invalid.";
             }
+        } else if (validity.tooLong) {
+            if (inputType == "postal-code") {
+                selectedSpan.textContent = "Postal code is too long."
+            }
         }
     } else {
         selectedInput.classList = "";
