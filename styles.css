@@ -33,6 +33,11 @@ body {
     width: 100%;
 }
 
+span[class*="-error"] {
+    font-size: .6rem;
+    height: 5px;
+}
+
 .submit-button {
     padding: .25rem .5rem;
 }
