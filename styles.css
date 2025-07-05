@@ -14,7 +14,8 @@ body {
 }
 
 .interest-form {
-    /* height: 70%; */
+    width: 450px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
