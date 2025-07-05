@@ -45,7 +45,7 @@ input {
 }
 
 span[class*="-error"] {
-    font-size: .6rem;
+    font-size: .75rem;
     height: 5px;
 }
 
