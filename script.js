@@ -12,7 +12,6 @@ const passwordConfirmationErrorSpan = document.querySelector(".password-confirma
 
 function validateInput(selectedInput, selectedSpan) {
     const validity = selectedInput.validity;
-    // console.log(validity.valid)
     const inputType = selectedInput.id;
     if (inputType == "postal-code") {
         if (selectedInput.value.length != 5) {
@@ -50,7 +49,11 @@ function validateInput(selectedInput, selectedSpan) {
             if (inputType == "postal-code") {
                 selectedSpan.textContent = "Postal code is invalid.";
             }
-        } 
+        } else if (validity.tooShort) {
+            if (inputType == "password") {
+                selectedSpan.textContent = "Password too short."
+            }
+        }
     } else {
         selectedInput.classList = "";
         selectedSpan.textContent = "";
