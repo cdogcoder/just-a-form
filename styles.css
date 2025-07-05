@@ -76,3 +76,12 @@ input[type="number"] {
     right: .75rem;
     bottom: 1.25rem; 
 }
+
+.reveal-password-button:hover {
+    cursor: pointer;
+}
+
+.reveal-password-button:active {
+    cursor: grabbing;
+    visibility: hidden;
+}
